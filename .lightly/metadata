@@ -1,0 +1,12 @@
+DEBUG_BUNDLES=/root/.lightly/java8_dap/debug-plugin.jar
+LATEST_LS_VERSION=1.0.0
+LS_START_COMMAND=java -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Dlog.level=ERROR -noverify -Xmx1G -jar /root/.lightly/java8_ls/plugins/org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar -configuration /root/.lightly/java8_ls/config_linux -data /root/.lightly --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED
+LOCAL_METADATA_FILE=/workspace/.lightly/metadata
+DEBUG_LS_START_COMMAND=java -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Dlog.level=ERROR -noverify -Dcom.microsoft.java.debug.serverAddress=0.0.0.0:41010 -Xmx1G -jar /root/.lightly/java8_dap/plugins/org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar -configuration /root/.lightly/java8_dap/config_linux -data /root --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED
+VERSION=JDK8
+STATUS=Installed
+DAP_INSTALL=mkdir -p /root/.lightly && cd /root/.lightly && wget http://teamcode-static.oss-cn-shanghai-internal.aliyuncs.com/public/jdt-dap-server-0.57.0-202006172108.tar.gz && tar -xvf jdt-dap-server-0.57.0-202006172108.tar.gz && rm -rf jdt-dap-server-0.57.0-202006172108.tar.gz
+DAP_UNINSTALL=rm -rf /root/.lightly/java8_dap
+LS_INSTALL=mkdir -p /root/.lightly && cd /root/.lightly && wget http://teamcode-static.oss-cn-shanghai-internal.aliyuncs.com/public/jdt-language-server-0.57.0-202006172108.tar.gz && tar -xvf jdt-language-server-0.57.0-202006172108.tar.gz && rm -rf jdt-language-server-0.57.0-202006172108.tar.gz
+LS_UNINSTALL=rm -rf /root/.lightly/java8_ls
+LATEST_DAP_VERSION=1.0.0

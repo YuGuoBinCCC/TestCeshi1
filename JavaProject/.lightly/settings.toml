@@ -1,0 +1,6 @@
+ports = []
+[languages.java]
+language = "java"
+src_folder = "src/main/java/"
+
+[languages.java.run]
